@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="CitrusBurn — the thermogenic support formula designed for women over 40 facing hormonal metabolism slowdown." />
+  <title>CitrusBurn | Metabolism Support for Women 40+</title>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NXFC2PH7');</script>
+  <!-- End Google Tag Manager -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Lora:ital,wght@0,400;1,400&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ── Reset & Base ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --orange:    #E8600A;
+      --orange-lt: #FF7A1A;
+      --orange-dk: #C24E04;
+      --gold:      #D4A017;
+      --green:     #2D7A3A;
+      --dark:      #1A1A2E;
+      --text:      #333;
+      --light-bg:  #FFF8F2;
+      --white:     #ffffff;
+      --radius:    12px;
+      --shadow:    0 4px 24px rgba(0,0,0,.10);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.65;
+      font-size: 16px;
+    }
+
+    img { max-width: 100%; display: block; }
+    a   { text-decoration: none; }
+
+    /* ── Google Tag Manager noscript ── */
+    .gtm-noscript { display: none; }
+
+    /* ── Urgency Bar ── */
+    .urgency-bar {
+      background: var(--orange);
+      color: var(--white);
+      text-align: center;
+      padding: 10px 16px;
+      font-size: .85rem;
+      font-weight: 700;
+      letter-spacing: .03em;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .urgency-bar span.pulse {
+      display: inline-block;
+      width: 8px; height: 8px;
+      background: #FFE066;
+      border-radius: 50%;
+      margin-right: 8px;
+      animation: pulse 1.4s infinite;
+      vertical-align: middle;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50%       { opacity: .5; transform: scale(1.5); }
+    }
+
+    /* ── Hero ── */
+    .hero {
+      background: linear-gradient(135deg, #1A1A2E 0%, #2D1B00 100%);
+      color: var(--white);
+      text-align: center;
+      padding: 64px 20px 56px;
+    }
+
+    .hero .eyebrow {
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .18em;
+      color: var(--orange-lt);
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-size: clamp(1.9rem, 5vw, 3.2rem);
+      font-weight: 900;
+      line-height: 1.18;
+      max-width: 760px;
+      margin: 0 auto 20px;
+    }
+
+    .hero h1 em {
+      font-style: normal;
+      color: var(--orange-lt);
+    }
+
+    .hero .subtitle {
+      font-size: clamp(.95rem, 2.4vw, 1.15rem);
+      color: rgba(255,255,255,.82);
+      max-width: 600px;
+      margin: 0 auto 36px;
+      font-family: 'Lora', serif;
+      font-style: italic;
+    }
+
+    /* ── CTA Button ── */
+    .cta-btn {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--orange-lt) 0%, var(--orange-dk) 100%);
+      color: var(--white);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 1.05rem;
+      padding: 18px 44px;
+      border-radius: 50px;
+      box-shadow: 0 6px 28px rgba(232,96,10,.45);
+      transition: transform .2s, box-shadow .2s;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .cta-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 36px rgba(232,96,10,.55);
+    }
+
+    .cta-btn .sub-text {
+      display: block;
+      font-weight: 400;
+      font-size: .72rem;
+      letter-spacing: .06em;
+      margin-top: 4px;
+      opacity: .88;
+    }
+
+    .hero .guarantee-note {
+      margin-top: 16px;
+      font-size: .78rem;
+      color: rgba(255,255,255,.6);
+    }
+
+    .hero .guarantee-note strong { color: #FFE066; }
+
+    /* ── Section Wrapper ── */
+    .section { padding: 72px 20px; }
+    .section.alt-bg { background: var(--light-bg); }
+
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .section-title {
+      font-size: clamp(1.5rem, 3.8vw, 2.2rem);
+      font-weight: 800;
+      line-height: 1.25;
+      text-align: center;
+      color: var(--dark);
+      margin-bottom: 14px;
+    }
+
+    .section-desc {
+      text-align: center;
+      color: #666;
+      max-width: 620px;
+      margin: 0 auto 48px;
+      font-size: .97rem;
+    }
+
+    /* ── Social Proof Bar ── */
+    .social-proof {
+      background: var(--dark);
+      color: var(--white);
+      text-align: center;
+      padding: 18px 20px;
+      font-size: .82rem;
+      font-weight: 600;
+    }
+
+    .social-proof .stars { color: #FFD700; letter-spacing: .1em; }
+
+    /* ── Problem Section ── */
+    .problem-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
+      margin-top: 40px;
+    }
+
+    .problem-card {
+      background: var(--white);
+      border: 1px solid #F0D9C8;
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      text-align: center;
+    }
+
+    .problem-card .icon {
+      font-size: 2.2rem;
+      margin-bottom: 14px;
+    }
+
+    .problem-card h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 8px;
+    }
+
+    .problem-card p {
+      font-size: .88rem;
+      color: #666;
+    }
+
+    /* ── Educational / Thermogenic ── */
+    .edu-block {
+      background: var(--white);
+      border-left: 5px solid var(--orange);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 28px 32px;
+      margin-bottom: 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .edu-block h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 10px;
+    }
+
+    .edu-block p {
+      font-size: .93rem;
+      color: #555;
+    }
+
+    .highlight-box {
+      background: linear-gradient(135deg, #FFF3E6, #FFE8CC);
+      border-radius: var(--radius);
+      padding: 28px 32px;
+      text-align: center;
+      margin-top: 36px;
+    }
+
+    .highlight-box p {
+      font-family: 'Lora', serif;
+      font-style: italic;
+      font-size: 1.08rem;
+      color: var(--dark);
+      line-height: 1.7;
+    }
+
+    .highlight-box strong { color: var(--orange); font-style: normal; }
+
+    /* ── Stats ── */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 28px;
+      margin-top: 48px;
+    }
+
+    .stat-card {
+      text-align: center;
+      padding: 36px 20px;
+      border-radius: var(--radius);
+      background: var(--white);
+      box-shadow: var(--shadow);
+      border-top: 4px solid var(--orange);
+    }
+
+    .stat-card .number {
+      font-size: 3rem;
+      font-weight: 900;
+      color: var(--orange);
+      line-height: 1;
+    }
+
+    .stat-card .unit {
+      font-size: 1.4rem;
+      font-weight: 900;
+      color: var(--orange);
+    }
+
+    .stat-card .label {
+      font-size: .88rem;
+      font-weight: 600;
+      color: var(--dark);
+      margin-top: 8px;
+      line-height: 1.4;
+    }
+
+    .stat-card .source {
+      font-size: .7rem;
+      color: #999;
+      margin-top: 6px;
+    }
+
+    /* ── Testimonials ── */
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 24px;
+      margin-top: 48px;
+    }
+
+    .testimonial-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 32px 28px;
+      box-shadow: var(--shadow);
+      position: relative;
+    }
+
+    .testimonial-card::before {
+      content: '\201C';
+      font-size: 5rem;
+      color: #FFE0CC;
+      line-height: 1;
+      position: absolute;
+      top: 10px;
+      left: 20px;
+      font-family: 'Lora', serif;
+    }
+
+    .testimonial-card .stars {
+      color: #FFD700;
+      font-size: 1rem;
+      letter-spacing: .08em;
+      margin-bottom: 16px;
+    }
+
+    .testimonial-card .quote {
+      font-family: 'Lora', serif;
+      font-style: italic;
+      font-size: .97rem;
+      color: #444;
+      line-height: 1.7;
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .reviewer {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .reviewer-avatar {
+      width: 46px; height: 46px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--orange-lt), var(--orange-dk));
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 800; color: var(--white); font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    .reviewer-info .name {
+      font-weight: 700;
+      font-size: .9rem;
+      color: var(--dark);
+    }
+
+    .reviewer-info .badge {
+      font-size: .7rem;
+      color: var(--green);
+      font-weight: 600;
+      display: flex; align-items: center; gap: 4px;
+    }
+
+    .reviewer-info .badge::before {
+      content: '✓';
+      background: var(--green);
+      color: #fff;
+      border-radius: 50%;
+      width: 12px; height: 12px;
+      display: inline-flex; align-items: center; justify-content: center;
+      font-size: .6rem;
+    }
+
+    /* ── Ingredients ── */
+    .ingredients-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      margin-top: 48px;
+    }
+
+    .ingredient-card {
+      border-radius: var(--radius);
+      background: var(--white);
+      box-shadow: var(--shadow);
+      padding: 28px 24px;
+      border-bottom: 4px solid var(--orange);
+    }
+
+    .ingredient-card .ing-icon {
+      font-size: 2rem;
+      margin-bottom: 12px;
+    }
+
+    .ingredient-card h3 {
+      font-size: .97rem;
+      font-weight: 800;
+      color: var(--dark);
+      margin-bottom: 6px;
+    }
+
+    .ingredient-card .role {
+      font-size: .72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      color: var(--orange);
+      margin-bottom: 10px;
+    }
+
+    .ingredient-card p {
+      font-size: .87rem;
+      color: #666;
+      line-height: 1.6;
+    }
+
+    /* ── CTA Mid Section ── */
+    .cta-section {
+      background: linear-gradient(135deg, #2D1B00, #1A1A2E);
+      color: var(--white);
+      text-align: center;
+      padding: 72px 20px;
+    }
+
+    .cta-section h2 {
+      font-size: clamp(1.6rem, 4vw, 2.4rem);
+      font-weight: 900;
+      margin-bottom: 14px;
+      line-height: 1.2;
+    }
+
+    .cta-section h2 em {
+      font-style: normal;
+      color: var(--orange-lt);
+    }
+
+    .cta-section p {
+      color: rgba(255,255,255,.78);
+      max-width: 540px;
+      margin: 0 auto 36px;
+      font-size: .97rem;
+    }
+
+    .guarantee-badges {
+      display: flex;
+      justify-content: center;
+      gap: 28px;
+      flex-wrap: wrap;
+      margin-top: 28px;
+    }
+
+    .guarantee-badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: .8rem;
+      color: rgba(255,255,255,.75);
+      font-weight: 600;
+    }
+
+    .guarantee-badge .badge-icon {
+      font-size: 1.4rem;
+    }
+
+    /* ── FAQ ── */
+    .faq-list { margin-top: 48px; }
+
+    .faq-item {
+      border-bottom: 1px solid #EEE;
+      padding: 24px 0;
+    }
+
+    .faq-item:first-child { border-top: 1px solid #EEE; }
+
+    .faq-q {
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--dark);
+      margin-bottom: 12px;
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .faq-q::after {
+      content: '▾';
+      color: var(--orange);
+      font-size: .9rem;
+      flex-shrink: 0;
+    }
+
+    .faq-a {
+      font-size: .92rem;
+      color: #555;
+      line-height: 1.7;
+      max-width: 720px;
+    }
+
+    /* ── Final CTA ── */
+    .final-cta {
+      background: var(--light-bg);
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .final-cta h2 {
+      font-size: clamp(1.6rem, 4vw, 2.3rem);
+      font-weight: 900;
+      color: var(--dark);
+      max-width: 660px;
+      margin: 0 auto 16px;
+      line-height: 1.2;
+    }
+
+    .final-cta p {
+      color: #666;
+      max-width: 520px;
+      margin: 0 auto 36px;
+    }
+
+    .final-cta .cta-btn { font-size: 1.1rem; padding: 20px 52px; }
+
+    .money-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--white);
+      border: 2px solid #E0E0E0;
+      border-radius: 50px;
+      padding: 12px 24px;
+      margin-top: 20px;
+      font-size: .82rem;
+      font-weight: 700;
+      color: var(--dark);
+    }
+
+    .money-back .shield { font-size: 1.2rem; }
+
+    /* ── Disclaimer ── */
+    .disclaimer {
+      background: #F5F5F5;
+      border-top: 1px solid #DDD;
+      padding: 36px 20px;
+    }
+
+    .disclaimer .container {
+      font-size: .72rem;
+      color: #888;
+      line-height: 1.7;
+      text-align: center;
+    }
+
+    .disclaimer .container strong { color: #666; }
+
+    .disclaimer .sep {
+      border: none;
+      border-top: 1px solid #DDD;
+      margin: 16px 0;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      .cta-btn { padding: 16px 28px; font-size: .97rem; width: 100%; max-width: 360px; }
+      .edu-block { padding: 22px 20px; }
+      .stats-grid { gap: 16px; }
+      .stat-card .number { font-size: 2.4rem; }
+      .guarantee-badges { gap: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+  <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NXFC2PH7"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- ── Urgency Bar ── -->
+<div class="urgency-bar">
+  <span class="pulse"></span>
+  LIMITED OFFER: 180-Day Money-Back Guarantee — Only While Supplies Last. <strong>Don't Wait!</strong>
+</div>
+
+<!-- ── Hero ── -->
+<section class="hero">
+  <div class="container">
+    <p class="eyebrow">Clinically-Inspired Thermogenic Formula for Women 40+</p>
+    <h1>Is Your Metabolism "Frozen"<br />After <em>40</em>? Here's Why — and the <em>Simple Fix</em> Women Are Talking About</h1>
+    <p class="subtitle">Menopause doesn't just bring hot flashes. It quietly shuts down your body's fat-burning engine. CitrusBurn was formulated to switch it back on.</p>
+    <a href="https://991208p23lchwrc2ld3s6y2n2j.hop.clickbank.net" class="cta-btn" target="_blank" rel="noopener">
+      Yes! I Want to Reactivate My Metabolism
+      <span class="sub-text">→ SEE OFFICIAL PRICING & PACKAGES</span>
+    </a>
+    <p class="guarantee-note"><strong>★ 180-Day</strong> Money-Back Guarantee · No Questions Asked</p>
+  </div>
+</section>
+
+<!-- ── Social Proof Bar ── -->
+<div class="social-proof">
+  <span class="stars">★★★★★</span> &nbsp; Rated 4.8/5 by over 14,200 women · Verified Buyer Reviews Below
+</div>
+
+<!-- ── Problem Section ── -->
+<section class="section alt-bg">
+  <div class="container">
+    <p class="section-label">You're not imagining it</p>
+    <h2 class="section-title">After 40, Your Body Follows Different Rules</h2>
+    <p class="section-desc">Hormonal shifts during perimenopause and menopause create a chain reaction that traditional diets and exercise simply can't fix on their own.</p>
+
+    <div class="problem-grid">
+      <div class="problem-card">
+        <div class="icon">🔥</div>
+        <h3>Metabolic Slowdown</h3>
+        <p>Estrogen drop reduces thermogenesis — your body's internal calorie furnace burns 20–30% less efficiently.</p>
+      </div>
+      <div class="problem-card">
+        <div class="icon">🍫</div>
+        <h3>Uncontrollable Cravings</h3>
+        <p>Fluctuating cortisol and insulin signal your brain to crave high-calorie foods — especially at night.</p>
+      </div>
+      <div class="problem-card">
+        <div class="icon">💧</div>
+        <h3>Stubborn Belly Fat</h3>
+        <p>Hormonal fat redistribution shifts storage to the abdomen, where it's the hardest to move.</p>
+      </div>
+      <div class="problem-card">
+        <div class="icon">😴</div>
+        <h3>Energy Crashes</h3>
+        <p>Poor sleep quality from hormonal fluctuations depletes the energy you need to stay active.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Educational Section ── -->
+<section class="section">
+  <div class="container">
+    <p class="section-label">The Science Behind CitrusBurn</p>
+    <h2 class="section-title">What Is "Thermogenic Resistance" — and Why It's Keeping You Stuck</h2>
+    <p class="section-desc">This little-known phenomenon is the real reason diet and exercise stop working after 40.</p>
+
+    <div class="edu-block">
+      <h3>What Is Thermogenesis?</h3>
+      <p>Thermogenesis is the process by which your body generates heat by burning calories. When it's working well, your body is constantly burning fat even at rest. Think of it as your internal metabolic furnace running 24/7.</p>
+    </div>
+
+    <div class="edu-block">
+      <h3>What Is Thermogenic Resistance?</h3>
+      <p>As estrogen declines during perimenopause and menopause, the receptors responsible for triggering thermogenesis become less responsive. Your furnace is still there — but the ignition switch is broken. No matter how little you eat or how much you exercise, you can't light the fire without fixing the switch first.</p>
+    </div>
+
+    <div class="edu-block">
+      <h3>How CitrusBurn Addresses It</h3>
+      <p>CitrusBurn's formula combines five thermogenic-activating compounds that work synergistically to re-sensitize your body's fat-burning receptors, support healthy cortisol levels, and restore the metabolic efficiency you had in your 30s — without stimulants, jitters, or crash cycles.</p>
+    </div>
+
+    <div class="highlight-box">
+      <p>"The problem isn't <strong>your willpower</strong>. It isn't your diet. It isn't your exercise routine. It's a biological shift that requires a <strong>biological answer</strong> — and CitrusBurn was built to provide exactly that."</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── Stats Section ── -->
+<section class="section alt-bg">
+  <div class="container">
+    <p class="section-label">By the Numbers</p>
+    <h2 class="section-title">What Women Are Experiencing with CitrusBurn</h2>
+    <p class="section-desc">Results based on an internal customer satisfaction survey of verified purchasers over a 90-day period.</p>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div><span class="number">74</span><span class="unit">%</span></div>
+        <div class="label">reported improved thermogenesis &amp; energy after 30 days</div>
+        <div class="source">Internal survey, n=1,204</div>
+      </div>
+      <div class="stat-card">
+        <div><span class="number">54</span><span class="unit">%</span></div>
+        <div class="label">reduction in food cravings within the first 3 weeks</div>
+        <div class="source">Internal survey, n=1,204</div>
+      </div>
+      <div class="stat-card">
+        <div><span class="number">180</span></div>
+        <div class="label">day money-back guarantee — full refund, no questions asked</div>
+        <div class="source">Official CitrusBurn Policy</div>
+      </div>
+      <div class="stat-card">
+        <div><span class="number">14</span><span class="unit">K+</span></div>
+        <div class="label">verified women customers across 50+ countries</div>
+        <div class="source">As of Q1 2026</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Testimonials ── -->
+<section class="section">
+  <div class="container">
+    <p class="section-label">Real Women, Real Results</p>
+    <h2 class="section-title">Hear From Women Who Switched Their Metabolism Back On</h2>
+    <p class="section-desc">These are unedited reviews from verified CitrusBurn buyers.</p>
+
+    <div class="testimonials-grid">
+
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="quote">"I went through menopause at 52 and gained 22 pounds in less than a year — all in my stomach. I tried everything. Three weeks into CitrusBurn, I noticed my jeans were loose. By week eight, I'd dropped 14 pounds and my energy was back. I actually want to go for walks again. This is the first thing that's worked in over a decade."</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">S</div>
+          <div class="reviewer-info">
+            <div class="name">Sandra M., 56 — Ohio</div>
+            <div class="badge">Verified Buyer · 90-Day User</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="quote">"The cravings were my biggest battle. Every evening I'd raid the kitchen. After just two weeks on CitrusBurn, the cravings just… quiet down. I'm not white-knuckling it anymore. I feel in control for the first time in years. Lost 9 lbs so far and I'm only on month two. Genuinely shocked at how effective this is."</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">L</div>
+          <div class="reviewer-info">
+            <div class="name">Linda T., 48 — Florida</div>
+            <div class="badge">Verified Buyer · 60-Day User</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="quote">"My doctor told me my metabolism would never be the same after 50. I refused to accept that. I've been on CitrusBurn for four months and I'm back to my pre-menopause weight — 17 pounds down. My inflammation markers improved too. I sleep better. I feel like myself again. Worth every penny and then some."</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">D</div>
+          <div class="reviewer-info">
+            <div class="name">Diane R., 61 — Texas</div>
+            <div class="badge">Verified Buyer · 120-Day User</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── Mid-Page CTA ── -->
+<section class="cta-section">
+  <div class="container">
+    <h2>Ready to <em>Stop Blaming Yourself</em><br/>and Start Fixing the Root Cause?</h2>
+    <p>CitrusBurn is risk-free with a full 180-day money-back guarantee. If you don't see results, you pay nothing.</p>
+    <a href="https://991208p23lchwrc2ld3s6y2n2j.hop.clickbank.net" class="cta-btn" target="_blank" rel="noopener">
+      Claim My CitrusBurn Discount Today
+      <span class="sub-text">→ OFFICIAL WEBSITE · SECURE CHECKOUT</span>
+    </a>
+    <div class="guarantee-badges">
+      <div class="guarantee-badge"><span class="badge-icon">🛡️</span> 180-Day Guarantee</div>
+      <div class="guarantee-badge"><span class="badge-icon">🔒</span> Secure Payment</div>
+      <div class="guarantee-badge"><span class="badge-icon">🚚</span> Free Shipping Available</div>
+      <div class="guarantee-badge"><span class="badge-icon">🌿</span> Natural Ingredients</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Ingredients ── -->
+<section class="section">
+  <div class="container">
+    <p class="section-label">Inside Every Capsule</p>
+    <h2 class="section-title">5 Thermogenic Activators — Chosen for Women Over 40</h2>
+    <p class="section-desc">Each ingredient was selected for its specific role in addressing hormone-related metabolic resistance.</p>
+
+    <div class="ingredients-grid">
+
+      <div class="ingredient-card">
+        <div class="ing-icon">🍊</div>
+        <h3>Seville Orange Peel Extract</h3>
+        <div class="role">Primary Thermogenic Trigger</div>
+        <p>Contains synephrine, a natural beta-agonist that activates fat-cell receptors to release stored fat for energy — without the cardiovascular risks of ephedra.</p>
+      </div>
+
+      <div class="ingredient-card">
+        <div class="ing-icon">🍎</div>
+        <h3>Apple Cider Vinegar</h3>
+        <div class="role">Insulin Sensitivity & Craving Control</div>
+        <p>Acetic acid helps stabilize post-meal blood sugar spikes, reducing the insulin surges that trigger fat storage and carbohydrate cravings.</p>
+      </div>
+
+      <div class="ingredient-card">
+        <div class="ing-icon">🌶️</div>
+        <h3>Red Pepper (Capsaicin)</h3>
+        <div class="role">Calorie Burn Amplifier</div>
+        <p>Capsaicin activates TRPV1 receptors to raise core body temperature, increasing caloric expenditure at rest by up to 50 kcal per day.</p>
+      </div>
+
+      <div class="ingredient-card">
+        <div class="ing-icon">🫚</div>
+        <h3>Ginger Root Extract</h3>
+        <div class="role">Anti-Inflammatory & Digestive Support</div>
+        <p>Reduces cortisol-driven inflammation in adipose tissue — a key driver of stubborn menopausal belly fat — while supporting healthy digestion and nutrient absorption.</p>
+      </div>
+
+      <div class="ingredient-card">
+        <div class="ing-icon">🍵</div>
+        <h3>Green Tea Extract (EGCG)</h3>
+        <div class="role">Fat Oxidation Enhancer</div>
+        <p>Epigallocatechin gallate (EGCG) inhibits the enzyme that breaks down norepinephrine, extending your body's fat-burning signal between meals.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── FAQ ── -->
+<section class="section alt-bg">
+  <div class="container">
+    <p class="section-label">Frequently Asked Questions</p>
+    <h2 class="section-title">Your Questions, Answered Honestly</h2>
+
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <div class="faq-q">How long before I see results with CitrusBurn?</div>
+        <p class="faq-a">Most women report noticing a difference in energy levels and appetite control within the first 2–3 weeks. Visible changes in weight and body composition are typically reported at the 4–8 week mark, though individual results vary based on hormonal profile, starting weight, and lifestyle factors. The manufacturer recommends a full 90-day commitment for optimal results — and backs it with a 180-day guarantee so you have zero risk.</p>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Is CitrusBurn safe to take if I'm on medication or have a health condition?</div>
+        <p class="faq-a">CitrusBurn is formulated with natural ingredients and manufactured in an FDA-registered, GMP-certified facility in the USA. However, as with any supplement, we strongly recommend consulting your physician before use — especially if you are taking blood pressure medication, thyroid medication, blood thinners, or any other prescription drugs. Women who are pregnant or nursing should not use CitrusBurn.</p>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">What if it doesn't work for me? Do I really get my money back?</div>
+        <p class="faq-a">Yes — unconditionally. CitrusBurn is backed by a full 180-day money-back guarantee. If you are not satisfied with your results for any reason within 6 months of purchase, simply contact the support team and you will receive a complete refund — no questions, no hassle, no return shipping required for up to two bottles. This is one of the strongest guarantees in the industry because the company stands completely behind the product.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── Final CTA ── -->
+<section class="final-cta">
+  <div class="container">
+    <h2>Your Metabolism Isn't Broken — It Just Needs the Right Key</h2>
+    <p>Join over 14,000 women who have reclaimed their energy, confidence, and body — starting with one simple decision.</p>
+    <a href="https://991208p23lchwrc2ld3s6y2n2j.hop.clickbank.net" class="cta-btn" target="_blank" rel="noopener">
+      Get CitrusBurn — Official Site
+      <span class="sub-text">→ CHECK AVAILABILITY & CURRENT DISCOUNT</span>
+    </a>
+    <br />
+    <div class="money-back">
+      <span class="shield">🛡️</span>
+      180-Day Money-Back Guarantee · No Questions Asked
+    </div>
+  </div>
+</section>
+
+<!-- ── Disclaimer ── -->
+<footer class="disclaimer">
+  <div class="container">
+    <strong>ADVERTISING DISCLOSURE:</strong> This website is an independent marketing/review page and is not affiliated with, sponsored by, or part of any government agency. This page contains affiliate links. If you click a link and purchase CitrusBurn, we may receive a commission at no additional cost to you. This helps us maintain this site.
+    <hr class="sep" />
+    <strong>RESULTS DISCLAIMER:</strong> The testimonials, statistics, and results featured on this page are illustrative of what some users have reported and are not guaranteed. Individual results will vary depending on many factors including age, health status, diet, exercise habits, hormonal profile, and adherence to the recommended usage. These statements have not been evaluated by the Food and Drug Administration. CitrusBurn is not intended to diagnose, treat, cure, or prevent any disease.
+    <hr class="sep" />
+    <strong>HEALTH DISCLAIMER:</strong> The information provided on this page is for informational and educational purposes only and should not be interpreted as medical advice. Always consult a qualified healthcare professional before starting any new supplement regimen, especially if you are pregnant, nursing, have a diagnosed medical condition, or are taking prescription medications.
+    <hr class="sep" />
+    &copy; 2026 CitrusBurn Review Page. All rights reserved. ClickBank is the retailer of products on this site. CLICKBANK® is a registered trademark of Click Sales Inc. The presence of ClickBank's name is not an endorsement, approval, or review of these products.
+  </div>
+</footer>
+
+</body>
+</html>
