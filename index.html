@@ -104,8 +104,35 @@
     .hero {
       background: linear-gradient(135deg, #1A1A2E 0%, #2D1B00 100%);
       color: var(--white);
-      text-align: center;
       padding: 64px 20px 56px;
+    }
+
+    .hero-inner {
+      max-width: 1060px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 48px;
+    }
+
+    .hero-text {
+      flex: 1 1 55%;
+      text-align: left;
+    }
+
+    .hero-img-col {
+      flex: 0 0 42%;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: 0 8px 40px rgba(0,0,0,.4);
+    }
+
+    .hero-img-col img {
+      width: 100%;
+      height: 480px;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
     }
 
     .hero .eyebrow {
@@ -118,11 +145,10 @@
     }
 
     .hero h1 {
-      font-size: clamp(1.9rem, 5vw, 3.2rem);
+      font-size: clamp(1.7rem, 3.6vw, 2.8rem);
       font-weight: 900;
       line-height: 1.18;
-      max-width: 760px;
-      margin: 0 auto 20px;
+      margin-bottom: 20px;
     }
 
     .hero h1 em {
@@ -131,10 +157,9 @@
     }
 
     .hero .subtitle {
-      font-size: clamp(.95rem, 2.4vw, 1.15rem);
+      font-size: clamp(.95rem, 1.8vw, 1.08rem);
       color: rgba(255,255,255,.82);
-      max-width: 600px;
-      margin: 0 auto 36px;
+      margin-bottom: 32px;
       font-family: 'Lora', serif;
       font-style: italic;
     }
@@ -612,73 +637,171 @@
       margin: 16px 0;
     }
 
-    /* ── Hero Image ── */
-    .hero-image-wrap {
-      max-width: 860px;
-      margin: 32px auto 0;
-      padding: 0 20px;
+    /* ── Testimonial Photo (top-centered) ── */
+    .testimonial-card {
+      background: var(--white);
       border-radius: var(--radius);
-      overflow: hidden;
-      line-height: 0;
-    }
-
-    .hero-image-wrap img {
-      width: 100%;
-      max-height: 500px;
-      height: auto;
-      object-fit: cover;
-      object-position: center top;
-      display: block;
-      border-radius: var(--radius);
-    }
-
-    /* ── Testimonial Photo ── */
-    .reviewer-avatar img {
-      width: 46px;
-      height: 46px;
-      border-radius: 50%;
-      object-fit: cover;
-      object-position: center top;
-      display: block;
-    }
-
-    /* ── Product Image (Ingredients) ── */
-    .product-image-wrap {
+      padding: 36px 28px 32px;
+      box-shadow: var(--shadow);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       text-align: center;
-      margin-bottom: 40px;
     }
 
-    .product-image-wrap img {
-      max-width: 420px;
+    .testimonial-card::before {
+      content: '\201C';
+      font-size: 5rem;
+      color: #FFE0CC;
+      line-height: 1;
+      position: absolute;
+      top: 10px;
+      left: 20px;
+      font-family: 'Lora', serif;
+    }
+
+    .reviewer-avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 3px solid var(--orange-lt);
+      margin-bottom: 14px;
+      flex-shrink: 0;
+    }
+
+    .reviewer-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+
+    .testimonial-card .stars {
+      color: #FFD700;
+      font-size: 1rem;
+      letter-spacing: .08em;
+      margin-bottom: 14px;
+    }
+
+    .testimonial-card .quote {
+      font-family: 'Lora', serif;
+      font-style: italic;
+      font-size: .97rem;
+      color: #444;
+      line-height: 1.7;
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .reviewer-info {
+      text-align: center;
+    }
+
+    .reviewer-info .name {
+      font-weight: 700;
+      font-size: .9rem;
+      color: var(--dark);
+    }
+
+    .reviewer-info .badge {
+      font-size: .7rem;
+      color: var(--green);
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+    }
+
+    .reviewer-info .badge::before {
+      content: '✓';
+      background: var(--green);
+      color: #fff;
+      border-radius: 50%;
+      width: 12px; height: 12px;
+      display: inline-flex; align-items: center; justify-content: center;
+      font-size: .6rem;
+    }
+
+    /* ── Ingredients 2-column layout ── */
+    .ingredients-layout {
+      display: flex;
+      align-items: flex-start;
+      gap: 48px;
+      margin-top: 48px;
+    }
+
+    .ingredients-image-col {
+      flex: 0 0 38%;
+      position: sticky;
+      top: 80px;
+    }
+
+    .ingredients-image-col img {
       width: 100%;
       border-radius: var(--radius);
       box-shadow: var(--shadow);
-      margin: 0 auto;
+      display: block;
     }
 
-    /* ── Final CTA with image ── */
+    .ingredients-list-col {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .ingredients-list-col .ingredient-card {
+      border-radius: var(--radius);
+      background: var(--white);
+      box-shadow: var(--shadow);
+      padding: 22px 24px;
+      border-bottom: 4px solid var(--orange);
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .ingredients-list-col .ingredient-card .ing-icon {
+      font-size: 1.8rem;
+      flex-shrink: 0;
+      margin-bottom: 0;
+    }
+
+    .ingredients-list-col .ingredient-card .ing-text h3 {
+      font-size: .97rem;
+      font-weight: 800;
+      color: var(--dark);
+      margin-bottom: 4px;
+    }
+
+    .ingredients-list-col .ingredient-card .ing-text .role {
+      font-size: .72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      color: var(--orange);
+      margin-bottom: 8px;
+    }
+
+    .ingredients-list-col .ingredient-card .ing-text p {
+      font-size: .87rem;
+      color: #666;
+      line-height: 1.6;
+    }
+
+    /* ── Final CTA with image on right ── */
     .final-cta-inner {
       display: flex;
       align-items: center;
       gap: 48px;
-      max-width: 860px;
+      max-width: 900px;
       margin: 0 auto;
       text-align: left;
-    }
-
-    .final-cta-image {
-      flex: 0 0 320px;
-      border-radius: var(--radius);
-      overflow: hidden;
-      box-shadow: var(--shadow);
-    }
-
-    .final-cta-image img {
-      width: 100%;
-      height: 380px;
-      object-fit: cover;
-      object-position: center top;
-      display: block;
     }
 
     .final-cta-content {
@@ -695,19 +818,48 @@
       margin-bottom: 28px;
     }
 
+    .final-cta-image {
+      flex: 0 0 300px;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .final-cta-image img {
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+
     /* ── Responsive ── */
+    @media (max-width: 768px) {
+      /* Hero: stack vertically, image below text */
+      .hero-inner { flex-direction: column; gap: 32px; }
+      .hero-text { text-align: center; }
+      .hero-img-col { flex: none; width: 100%; }
+      .hero-img-col img { height: 260px; }
+
+      /* Ingredients: stack vertically */
+      .ingredients-layout { flex-direction: column; gap: 28px; }
+      .ingredients-image-col { flex: none; width: 100%; position: static; }
+      .ingredients-image-col img { max-width: 360px; margin: 0 auto; }
+
+      /* Final CTA: stack, image below */
+      .final-cta-inner { flex-direction: column; text-align: center; gap: 28px; }
+      .final-cta-image { flex: none; width: 100%; order: 2; }
+      .final-cta-image img { height: 240px; }
+      .final-cta-content { order: 1; }
+      .final-cta-content h2, .final-cta-content p { text-align: center; }
+    }
+
     @media (max-width: 600px) {
       .cta-btn { padding: 16px 28px; font-size: .97rem; width: 100%; max-width: 360px; }
       .edu-block { padding: 22px 20px; }
       .stats-grid { gap: 16px; }
       .stat-card .number { font-size: 2.4rem; }
       .guarantee-badges { gap: 16px; }
-      .hero-image-wrap { padding: 0 12px; margin-top: 24px; }
-      .hero-image-wrap img { max-height: 220px; }
-.final-cta-inner { flex-direction: column; text-align: center; gap: 28px; }
-      .final-cta-image { flex: none; width: 100%; }
-      .final-cta-image img { height: 240px; }
-      .final-cta-content h2, .final-cta-content p { text-align: center; }
     }
   </style>
 </head>
@@ -728,19 +880,20 @@
 
 <!-- ── Hero ── -->
 <section class="hero">
-  <div class="container">
-    <p class="eyebrow">Clinically-Inspired Thermogenic Formula for Women 40+</p>
-    <h1>Is Your Metabolism "Frozen"<br />After <em>40</em>? Here's Why — and the <em>Simple Fix</em> Women Are Talking About</h1>
-    <p class="subtitle">Menopause doesn't just bring hot flashes. It quietly shuts down your body's fat-burning engine. CitrusBurn was formulated to switch it back on.</p>
-    <a href="https://991208p23lchwrc2ld3s6y2n2j.hop.clickbank.net" class="cta-btn" target="_blank" rel="noopener">
-      Yes! I Want to Reactivate My Metabolism
-      <span class="sub-text">→ SEE OFFICIAL PRICING & PACKAGES</span>
-    </a>
-    <p class="guarantee-note"><strong>★ 180-Day</strong> Money-Back Guarantee · No Questions Asked</p>
-  </div>
-  <!-- ── Hero Image ── -->
-  <div class="hero-image-wrap">
-    <img src="images/hero.png" alt="Woman holding CitrusBurn supplement bottle, smiling in a bright kitchen" width="1440" height="500" loading="eager" />
+  <div class="hero-inner">
+    <div class="hero-text">
+      <p class="eyebrow">Clinically-Inspired Thermogenic Formula for Women 40+</p>
+      <h1>Is Your Metabolism "Frozen"<br />After <em>40</em>? Here's Why — and the <em>Simple Fix</em> Women Are Talking About</h1>
+      <p class="subtitle">Menopause doesn't just bring hot flashes. It quietly shuts down your body's fat-burning engine. CitrusBurn was formulated to switch it back on.</p>
+      <a href="https://991208p23lchwrc2ld3s6y2n2j.hop.clickbank.net" class="cta-btn" target="_blank" rel="noopener">
+        Yes! I Want to Reactivate My Metabolism
+        <span class="sub-text">→ SEE OFFICIAL PRICING & PACKAGES</span>
+      </a>
+      <p class="guarantee-note"><strong>★ 180-Day</strong> Money-Back Guarantee · No Questions Asked</p>
+    </div>
+    <div class="hero-img-col">
+      <img src="images/hero.png" alt="Woman holding CitrusBurn supplement bottle, smiling in a bright kitchen" width="800" height="480" loading="eager" />
+    </div>
   </div>
 </section>
 
@@ -851,38 +1004,32 @@
     <div class="testimonials-grid">
 
       <div class="testimonial-card">
+        <div class="reviewer-avatar"><img src="images/sandra.jpg" alt="Sandra M." /></div>
         <div class="stars">★★★★★</div>
         <p class="quote">"I went through menopause at 52 and gained 22 pounds in less than a year — all in my stomach. I tried everything. Three weeks into CitrusBurn, I noticed my jeans were loose. By week eight, I'd dropped 14 pounds and my energy was back. I actually want to go for walks again. This is the first thing that's worked in over a decade."</p>
-        <div class="reviewer">
-          <div class="reviewer-avatar"><img src="images/sandra.jpg" alt="Sandra M." /></div>
-          <div class="reviewer-info">
-            <div class="name">Sandra M., 56 — Ohio</div>
-            <div class="badge">Verified Buyer · 90-Day User</div>
-          </div>
+        <div class="reviewer-info">
+          <div class="name">Sandra M., 56 — Ohio</div>
+          <div class="badge">Verified Buyer · 90-Day User</div>
         </div>
       </div>
 
       <div class="testimonial-card">
+        <div class="reviewer-avatar"><img src="images/linda.png" alt="Linda T." /></div>
         <div class="stars">★★★★★</div>
         <p class="quote">"The cravings were my biggest battle. Every evening I'd raid the kitchen. After just two weeks on CitrusBurn, the cravings just… quiet down. I'm not white-knuckling it anymore. I feel in control for the first time in years. Lost 9 lbs so far and I'm only on month two. Genuinely shocked at how effective this is."</p>
-        <div class="reviewer">
-          <div class="reviewer-avatar"><img src="images/linda.png" alt="Linda T." /></div>
-          <div class="reviewer-info">
-            <div class="name">Linda T., 48 — Florida</div>
-            <div class="badge">Verified Buyer · 60-Day User</div>
-          </div>
+        <div class="reviewer-info">
+          <div class="name">Linda T., 48 — Florida</div>
+          <div class="badge">Verified Buyer · 60-Day User</div>
         </div>
       </div>
 
       <div class="testimonial-card">
+        <div class="reviewer-avatar"><img src="images/diane.png" alt="Diane R." /></div>
         <div class="stars">★★★★★</div>
         <p class="quote">"My doctor told me my metabolism would never be the same after 50. I refused to accept that. I've been on CitrusBurn for four months and I'm back to my pre-menopause weight — 17 pounds down. My inflammation markers improved too. I sleep better. I feel like myself again. Worth every penny and then some."</p>
-        <div class="reviewer">
-          <div class="reviewer-avatar"><img src="images/diane.png" alt="Diane R." /></div>
-          <div class="reviewer-info">
-            <div class="name">Diane R., 61 — Texas</div>
-            <div class="badge">Verified Buyer · 120-Day User</div>
-          </div>
+        <div class="reviewer-info">
+          <div class="name">Diane R., 61 — Texas</div>
+          <div class="badge">Verified Buyer · 120-Day User</div>
         </div>
       </div>
 
@@ -915,47 +1062,60 @@
     <h2 class="section-title">5 Thermogenic Activators — Chosen for Women Over 40</h2>
     <p class="section-desc">Each ingredient was selected for its specific role in addressing hormone-related metabolic resistance.</p>
 
-    <div class="product-image-wrap">
-      <img src="images/product.png" alt="CitrusBurn bottle surrounded by natural ingredients: orange, ginger, red pepper, green tea" width="420" height="420" loading="lazy" />
-    </div>
+    <div class="ingredients-layout">
 
-    <div class="ingredients-grid">
-
-      <div class="ingredient-card">
-        <div class="ing-icon">🍊</div>
-        <h3>Seville Orange Peel Extract</h3>
-        <div class="role">Primary Thermogenic Trigger</div>
-        <p>Contains synephrine, a natural beta-agonist that activates fat-cell receptors to release stored fat for energy — without the cardiovascular risks of ephedra.</p>
+      <div class="ingredients-image-col">
+        <img src="images/product.png" alt="CitrusBurn bottle surrounded by natural ingredients: orange, ginger, red pepper, green tea" width="420" height="420" loading="lazy" />
       </div>
 
-      <div class="ingredient-card">
-        <div class="ing-icon">🍎</div>
-        <h3>Apple Cider Vinegar</h3>
-        <div class="role">Insulin Sensitivity & Craving Control</div>
-        <p>Acetic acid helps stabilize post-meal blood sugar spikes, reducing the insulin surges that trigger fat storage and carbohydrate cravings.</p>
-      </div>
+      <div class="ingredients-list-col">
 
-      <div class="ingredient-card">
-        <div class="ing-icon">🌶️</div>
-        <h3>Red Pepper (Capsaicin)</h3>
-        <div class="role">Calorie Burn Amplifier</div>
-        <p>Capsaicin activates TRPV1 receptors to raise core body temperature, increasing caloric expenditure at rest by up to 50 kcal per day.</p>
-      </div>
+        <div class="ingredient-card">
+          <div class="ing-icon">🍊</div>
+          <div class="ing-text">
+            <h3>Seville Orange Peel Extract</h3>
+            <div class="role">Primary Thermogenic Trigger</div>
+            <p>Contains synephrine, a natural beta-agonist that activates fat-cell receptors to release stored fat for energy — without the cardiovascular risks of ephedra.</p>
+          </div>
+        </div>
 
-      <div class="ingredient-card">
-        <div class="ing-icon">🫚</div>
-        <h3>Ginger Root Extract</h3>
-        <div class="role">Anti-Inflammatory & Digestive Support</div>
-        <p>Reduces cortisol-driven inflammation in adipose tissue — a key driver of stubborn menopausal belly fat — while supporting healthy digestion and nutrient absorption.</p>
-      </div>
+        <div class="ingredient-card">
+          <div class="ing-icon">🍎</div>
+          <div class="ing-text">
+            <h3>Apple Cider Vinegar</h3>
+            <div class="role">Insulin Sensitivity & Craving Control</div>
+            <p>Acetic acid helps stabilize post-meal blood sugar spikes, reducing the insulin surges that trigger fat storage and carbohydrate cravings.</p>
+          </div>
+        </div>
 
-      <div class="ingredient-card">
-        <div class="ing-icon">🍵</div>
-        <h3>Green Tea Extract (EGCG)</h3>
-        <div class="role">Fat Oxidation Enhancer</div>
-        <p>Epigallocatechin gallate (EGCG) inhibits the enzyme that breaks down norepinephrine, extending your body's fat-burning signal between meals.</p>
-      </div>
+        <div class="ingredient-card">
+          <div class="ing-icon">🌶️</div>
+          <div class="ing-text">
+            <h3>Red Pepper (Capsaicin)</h3>
+            <div class="role">Calorie Burn Amplifier</div>
+            <p>Capsaicin activates TRPV1 receptors to raise core body temperature, increasing caloric expenditure at rest by up to 50 kcal per day.</p>
+          </div>
+        </div>
 
+        <div class="ingredient-card">
+          <div class="ing-icon">🫚</div>
+          <div class="ing-text">
+            <h3>Ginger Root Extract</h3>
+            <div class="role">Anti-Inflammatory & Digestive Support</div>
+            <p>Reduces cortisol-driven inflammation in adipose tissue — a key driver of stubborn menopausal belly fat — while supporting healthy digestion and nutrient absorption.</p>
+          </div>
+        </div>
+
+        <div class="ingredient-card">
+          <div class="ing-icon">🍵</div>
+          <div class="ing-text">
+            <h3>Green Tea Extract (EGCG)</h3>
+            <div class="role">Fat Oxidation Enhancer</div>
+            <p>Epigallocatechin gallate (EGCG) inhibits the enzyme that breaks down norepinephrine, extending your body's fat-burning signal between meals.</p>
+          </div>
+        </div>
+
+      </div>
     </div>
   </div>
 </section>
@@ -990,9 +1150,6 @@
 <!-- ── Final CTA ── -->
 <section class="final-cta">
   <div class="final-cta-inner">
-    <div class="final-cta-image">
-      <img src="images/cta.png" alt="Happy woman in her kitchen after using CitrusBurn" width="320" height="380" loading="lazy" />
-    </div>
     <div class="final-cta-content">
       <h2>Your Metabolism Isn't Broken — It Just Needs the Right Key</h2>
       <p>Join over 14,000 women who have reclaimed their energy, confidence, and body — starting with one simple decision.</p>
@@ -1005,6 +1162,9 @@
         <span class="shield">🛡️</span>
         180-Day Money-Back Guarantee · No Questions Asked
       </div>
+    </div>
+    <div class="final-cta-image">
+      <img src="images/cta.png" alt="Happy woman in her kitchen after using CitrusBurn" width="300" height="380" loading="lazy" />
     </div>
   </div>
 </section>
