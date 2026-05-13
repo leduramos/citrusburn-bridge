@@ -612,6 +612,85 @@
       margin: 16px 0;
     }
 
+    /* ── Hero Image ── */
+    .hero-image-wrap {
+      width: 100%;
+      max-height: 480px;
+      overflow: hidden;
+      line-height: 0;
+    }
+
+    .hero-image-wrap img {
+      width: 100%;
+      height: 480px;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+
+    /* ── Testimonial Photo ── */
+    .reviewer-avatar img {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+
+    /* ── Product Image (Ingredients) ── */
+    .product-image-wrap {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .product-image-wrap img {
+      max-width: 420px;
+      width: 100%;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      margin: 0 auto;
+    }
+
+    /* ── Final CTA with image ── */
+    .final-cta-inner {
+      display: flex;
+      align-items: center;
+      gap: 48px;
+      max-width: 860px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .final-cta-image {
+      flex: 0 0 320px;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .final-cta-image img {
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+
+    .final-cta-content {
+      flex: 1;
+    }
+
+    .final-cta-content h2 {
+      text-align: left;
+      margin-bottom: 16px;
+    }
+
+    .final-cta-content p {
+      text-align: left;
+      margin-bottom: 28px;
+    }
+
     /* ── Responsive ── */
     @media (max-width: 600px) {
       .cta-btn { padding: 16px 28px; font-size: .97rem; width: 100%; max-width: 360px; }
@@ -619,6 +698,11 @@
       .stats-grid { gap: 16px; }
       .stat-card .number { font-size: 2.4rem; }
       .guarantee-badges { gap: 16px; }
+      .hero-image-wrap img { height: 260px; }
+      .final-cta-inner { flex-direction: column; text-align: center; gap: 28px; }
+      .final-cta-image { flex: none; width: 100%; }
+      .final-cta-image img { height: 240px; }
+      .final-cta-content h2, .final-cta-content p { text-align: center; }
     }
   </style>
 </head>
@@ -650,6 +734,11 @@
     <p class="guarantee-note"><strong>★ 180-Day</strong> Money-Back Guarantee · No Questions Asked</p>
   </div>
 </section>
+
+<!-- ── Hero Image ── -->
+<div class="hero-image-wrap">
+  <img src="images/hero.png" alt="Woman holding CitrusBurn supplement bottle, smiling in a bright kitchen" width="1440" height="480" loading="eager" />
+</div>
 
 <!-- ── Social Proof Bar ── -->
 <div class="social-proof">
@@ -761,7 +850,7 @@
         <div class="stars">★★★★★</div>
         <p class="quote">"I went through menopause at 52 and gained 22 pounds in less than a year — all in my stomach. I tried everything. Three weeks into CitrusBurn, I noticed my jeans were loose. By week eight, I'd dropped 14 pounds and my energy was back. I actually want to go for walks again. This is the first thing that's worked in over a decade."</p>
         <div class="reviewer">
-          <div class="reviewer-avatar">S</div>
+          <div class="reviewer-avatar"><img src="images/sandra.jpg" alt="Sandra M." /></div>
           <div class="reviewer-info">
             <div class="name">Sandra M., 56 — Ohio</div>
             <div class="badge">Verified Buyer · 90-Day User</div>
@@ -773,7 +862,7 @@
         <div class="stars">★★★★★</div>
         <p class="quote">"The cravings were my biggest battle. Every evening I'd raid the kitchen. After just two weeks on CitrusBurn, the cravings just… quiet down. I'm not white-knuckling it anymore. I feel in control for the first time in years. Lost 9 lbs so far and I'm only on month two. Genuinely shocked at how effective this is."</p>
         <div class="reviewer">
-          <div class="reviewer-avatar">L</div>
+          <div class="reviewer-avatar"><img src="images/linda.png" alt="Linda T." /></div>
           <div class="reviewer-info">
             <div class="name">Linda T., 48 — Florida</div>
             <div class="badge">Verified Buyer · 60-Day User</div>
@@ -785,7 +874,7 @@
         <div class="stars">★★★★★</div>
         <p class="quote">"My doctor told me my metabolism would never be the same after 50. I refused to accept that. I've been on CitrusBurn for four months and I'm back to my pre-menopause weight — 17 pounds down. My inflammation markers improved too. I sleep better. I feel like myself again. Worth every penny and then some."</p>
         <div class="reviewer">
-          <div class="reviewer-avatar">D</div>
+          <div class="reviewer-avatar"><img src="images/diane.png" alt="Diane R." /></div>
           <div class="reviewer-info">
             <div class="name">Diane R., 61 — Texas</div>
             <div class="badge">Verified Buyer · 120-Day User</div>
@@ -821,6 +910,10 @@
     <p class="section-label">Inside Every Capsule</p>
     <h2 class="section-title">5 Thermogenic Activators — Chosen for Women Over 40</h2>
     <p class="section-desc">Each ingredient was selected for its specific role in addressing hormone-related metabolic resistance.</p>
+
+    <div class="product-image-wrap">
+      <img src="images/product.png" alt="CitrusBurn bottle surrounded by natural ingredients: orange, ginger, red pepper, green tea" width="420" height="420" loading="lazy" />
+    </div>
 
     <div class="ingredients-grid">
 
@@ -892,17 +985,22 @@
 
 <!-- ── Final CTA ── -->
 <section class="final-cta">
-  <div class="container">
-    <h2>Your Metabolism Isn't Broken — It Just Needs the Right Key</h2>
-    <p>Join over 14,000 women who have reclaimed their energy, confidence, and body — starting with one simple decision.</p>
-    <a href="https://991208p23lchwrc2ld3s6y2n2j.hop.clickbank.net" class="cta-btn" target="_blank" rel="noopener">
-      Get CitrusBurn — Official Site
-      <span class="sub-text">→ CHECK AVAILABILITY & CURRENT DISCOUNT</span>
-    </a>
-    <br />
-    <div class="money-back">
-      <span class="shield">🛡️</span>
-      180-Day Money-Back Guarantee · No Questions Asked
+  <div class="final-cta-inner">
+    <div class="final-cta-image">
+      <img src="images/cta.png" alt="Happy woman in her kitchen after using CitrusBurn" width="320" height="380" loading="lazy" />
+    </div>
+    <div class="final-cta-content">
+      <h2>Your Metabolism Isn't Broken — It Just Needs the Right Key</h2>
+      <p>Join over 14,000 women who have reclaimed their energy, confidence, and body — starting with one simple decision.</p>
+      <a href="https://991208p23lchwrc2ld3s6y2n2j.hop.clickbank.net" class="cta-btn" target="_blank" rel="noopener">
+        Get CitrusBurn — Official Site
+        <span class="sub-text">→ CHECK AVAILABILITY & CURRENT DISCOUNT</span>
+      </a>
+      <br /><br />
+      <div class="money-back">
+        <span class="shield">🛡️</span>
+        180-Day Money-Back Guarantee · No Questions Asked
+      </div>
     </div>
   </div>
 </section>
